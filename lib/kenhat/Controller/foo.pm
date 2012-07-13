@@ -7,13 +7,13 @@ BEGIN {extends 'Catalyst::Controller'; }
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-#    if(exists $c->session->{'foo'}) {
-#        my $foo = $c->session->{'foo'};
-#        $c->response->body("foo: $foo");
-#    }
-#    else {
+    if(exists $c->session->{'foo'}) {
+        my $foo = $c->session->{'foo'};
+        $c->response->body("foo: $foo");
+    }
+    else {
         $c->forward('/index');
-#    }
+    }
     
 }
 

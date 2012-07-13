@@ -3,6 +3,8 @@
 use Modern::Perl;
 use Module::Extract::Use;
 
+# test comment
+
 my $extor = Module::Extract::Use->new;
 
 my $file = 'script/kenhat.psgi';

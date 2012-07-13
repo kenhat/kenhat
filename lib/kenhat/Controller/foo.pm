@@ -12,7 +12,7 @@ sub index :Path :Args(0) {
 #        $c->response->body("foo: $foo");
 #    }
 #    else {
-        $c->forward($c->uri_for('/'));
+        $c->forward('/');
 #    }
     
 }

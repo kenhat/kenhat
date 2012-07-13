@@ -7,8 +7,14 @@ BEGIN {extends 'Catalyst::Controller'; }
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    my $foo = $c->session->{'foo'};
-    $c->response->body("foo: $foo");
+#    if(exists $c->session->{'foo'}) {
+#        my $foo = $c->session->{'foo'};
+#        $c->response->body("foo: $foo");
+#    }
+#    else {
+        $c->forward(uri_for('/');
+#    }
+    
 }
 
 sub begin : Private {
